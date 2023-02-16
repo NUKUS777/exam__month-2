@@ -1,0 +1,149 @@
+.hero {
+    height: 100vh;
+    background-image: url(../images/herobackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    padding: 150px 165px 152px 165px;
+    margin: 0 auto;
+    position: relative;
+    @include fortablet() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:137px 97px 217px 97px;
+        margin-top: 64px;
+
+    }
+    @include formobile() {
+        margin-top: 0;
+    }
+    &__title {
+        font-family: $family-title;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -2.5px;
+        color:  $mainbackground;
+        max-width: 500px;
+        min-height: 112px;
+        margin-bottom: 40px;
+        @include fortablet() {
+            width:573px ;
+            height:112px ;
+            text-align: center;
+        }
+        @include formobile() {
+            width:311px ;
+            height:120px ;
+            font-size: 40px;
+            line-height: 40px;
+            letter-spacing: -1.78571px;
+            margin-bottom: 24px;
+        }
+    }
+    &__text {
+        margin-left: 87px;
+        @include fortablet() {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           margin: 0;
+        }
+        &-des {
+            font-family: $family-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: #FFFFFF;
+            max-width: 405px;
+            min-height: 100px;
+            margin-bottom: 40px;
+            @include fortablet() {
+                max-width:573px ;
+                min-height:75px ;
+                text-align: center;
+            }
+            @include formobile() {
+                width:311px ;
+                height:125px ;
+                margin-bottom: 34px;
+            }
+        }
+        &-btn {
+            font-family: $family-title;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+            background: #FCB72B;
+            width: 180px;
+            height: 53px;
+            border:none ;
+        }
+    }
+&__leftpath {
+    position: absolute;
+    width: 202.5px;
+    left: 0;
+    top: 50%;
+    @include forpath() {
+        display: none;
+    }
+
+}
+&__rigthpath {
+    width: 447px;
+    height: 138px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include forpath() {
+        display: none;
+    }
+
+}
+&__tabletpath {
+    display: none;
+    @include forpath() {
+        display: block;
+        width: 446px;
+        height: 97px;
+        left: -75PX;
+        top: 80%;
+        position: absolute;
+    }
+    @include formobile() {
+        display: none;
+    }
+}
+&__mobilepath {
+    display: none;
+    @include formobile() {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 70%;
+    }
+}
+}
+@media /* only for retina displays */
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: url("../images/herobackground@2x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-position: center;
+    }
+}

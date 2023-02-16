@@ -1,0 +1,104 @@
+.about {
+    width: 100%;
+    min-height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 165px;
+    @include fortablet() {
+        padding-left: 97px;
+    }
+    @include formobile() {
+        padding:0 22px;
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 56px;
+        letter-spacing: -2.5px;
+        color: #FFFFFF;
+        @include formobile() {
+            margin: 0 auto;
+            width: 311px;
+            height: 40px;
+        }
+    }
+    &__box {
+        position: relative;
+        right: -31px;
+        @include formobile() {
+            display: none;
+        }
+        &-item {
+            display: inline-block;
+            margin-left: 24px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            border: 3px solid #FFFFFF;
+        }
+    }
+}
+.digital {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 165px;
+    @include foraboutcard() {
+        padding: 0 60px;
+    }
+    @include fortablet() {
+        padding: 0;
+        flex-wrap: wrap;
+        row-gap: 77px;
+       text-align: center;
+       justify-content: center;
+    }
+
+    &__img {
+            border-radius: 50%;
+            max-width:350px;
+            margin-left: 30px;
+    }
+    &__card {
+        max-width: 365px;
+       &-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: #495567;
+        max-width: 365px;
+        min-height: 96px;
+        margin-bottom: 24px;
+        @include formobile() {
+            max-width: 311px;
+            min-height: 64px;
+        }
+       }
+       &-des {
+        font-family: 'Lexend Deca';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+        max-width: 365px;
+        min-height: 75px;
+        @include formobile() {
+            max-width: 311px;
+            min-height: 100px;
+        }
+       }
+    }
+}
+.digitalbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 169px;
+    margin-top: 144px;
+
+}

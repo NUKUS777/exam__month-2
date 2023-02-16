@@ -1,0 +1,129 @@
+nav {
+    
+    width: 100%;
+    background-color: $mainbackground;
+    padding-left: 165px;
+    padding-right: 165px;
+    @include foraboutcard() {
+        padding:0  100px 0 165px;
+    }
+    @include fortablet() {
+        padding:0  50px 0 17px;
+    }
+}
+input[type="checkbox"] {
+    display: none;
+}
+.removebtn {
+    display: none;
+    @include fornav() {
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 32px;
+    }
+}
+.navbar {
+  display: flex;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  @include fortablet() {
+    padding:35px 97px;
+   }
+  &__img {
+    margin-right: 58px;
+    margin-top: 10px;
+    width: 75.5px;
+    height: 20px;
+    @include fornav() {
+       position: absolute;
+       left: 36%;
+       top: 10px;
+    }
+  }
+  &__menu {
+    @include displayflex();
+    column-gap: 32px;
+    @include fornav() {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+   
+    &-item {
+        @include flexdirection();
+        list-style: none;
+    }
+    &-link {
+        text-decoration: none;
+        font-family: $family-title;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+        font-style: normal;
+        @include fornav() {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: #E5ECF4;
+        }
+    }
+  }
+  &__area {
+    @include displayflex();
+    width: 100%;
+    @include fornav() {
+        // @include flex-direction();
+        position: absolute;
+        flex-wrap: wrap;
+        top: 70px;
+        left:15px;
+        transform:translateX(-140%) ;
+        max-width: 256px;
+        min-height: 603px;
+        background-color: #333A44;
+        z-index: 2;
+        row-gap: 24px;
+        padding-top: 0;
+        padding-left: 32px; 
+        transition: 1s;
+    }
+  }
+  &__button {
+    background: #FCB72B;
+    width: 180px;
+    height: 53px;
+    font-family: $family-title ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+  }
+}
+
+.hamburger {
+    display: none;
+    @include fornav() {
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 32px;
+    }
+}
+.navbar__input:checked ~.navbar__area {
+    transform: translateX(0);
+}
+.removebtn {
+    display: none;
+}
+.navbar__input:checked~.hamburger {
+  display: none;
+  
+} 
+.navbar__input:checked~.removebtn {
+    display: block;
+}

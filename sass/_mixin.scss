@@ -1,0 +1,40 @@
+@mixin flexdirection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin displayflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin fortablet {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+@mixin fornav {
+    @media(max-width:871px) {
+        @content;
+    }
+}
+@mixin forpath {
+    @media(max-width:883px) {
+        @content;
+    }
+}
+@mixin forusing {
+    @media(max-width:1180px) {
+        @content;
+    }
+}
+@mixin formobile {
+    @media(max-width:576px) {
+        @content;
+    }
+}
+@mixin foraboutcard {
+    @media(max-width:992px) {
+        @content;
+    }
+}

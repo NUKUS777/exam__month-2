@@ -1,0 +1,95 @@
+.use {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 139px;
+    padding: 0 165px;
+    @include forusing() {
+        padding: 0 97px;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include formobile() {
+        padding: 0 32px;
+    }
+}
+.usecard {
+    display: flex;
+    justify-content: space-between;
+    @include forusing() {
+        flex-wrap: wrap-reverse;
+        padding: 0 20%;
+    }
+    @include formobile {
+        padding: 0 32px;
+        width: 311px;
+        justify-content: center;
+    }
+    &__img {
+        max-width: 400px;
+        max-height: 400px;
+        @include formobile() {
+            max-width: 300px;
+            max-height: 300px; 
+        }
+    }
+    &__text {
+        padding: 66px 0;
+        width: 400px;
+        @include formobile(){
+           display: flex;  
+           flex-direction: column; 
+           align-items: center;  
+        }
+        &-title {
+            width: 445px;
+            min-height: 96px;
+            font-family: $family-title;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: -2.14286px;
+            color: #495567;
+            @include formobile() {
+                width: 311px;
+                height: 140px;
+                text-align: center;
+            }
+        }
+        &-des {
+            width: 445px;
+            height: 100px;
+            font-family: 'Lexend Deca';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+            margin-top: 24px;
+            @include formobile() {
+                width: 311px;
+                height: 150px;
+                text-align: center;
+            }
+        }
+
+    }
+    &__btn {
+        background: #FCB72B;
+        width: 180px;
+        height: 53px;
+        font-family: $family-title;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        border: none;
+        margin-top: 40px;
+    }
+}
+.border50 {
+    border-radius: 50%;
+}

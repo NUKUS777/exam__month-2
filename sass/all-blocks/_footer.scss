@@ -1,0 +1,110 @@
+.footerstart {
+    margin-top: 200px;
+    background-color: $footerstarbackground;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px;
+    padding: 102px 165px;
+    @include forusing() {
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 40px;
+        text-align: center;
+        padding: 62px 150px;
+    }
+    @include fortablet() {
+        padding:62px 10% ;
+    }
+    @include formobile(){
+        padding: 88px 32px;
+        row-gap: 85px;
+    }
+    &__title {
+        width: 415px;
+        height: 96px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -2.14286px;
+        color: #FFFFFF;
+        @include formobile(){
+            width: 311px;
+            height: 64px;
+            margin-bottom: 40px;
+        }
+    }
+    &__box {
+        display: flex;
+        column-gap: 18px;
+        &-img {
+            width: 130px;
+        }
+    }
+}
+.footerendnav {
+    background-color: $footerendbackground;
+    min-height:96px ;
+    width: 100%;
+    padding:0 13%;
+    display: flex;
+    align-items: center;
+    @include fortablet() {
+        padding: 0 40px;
+    }
+    @include formobile() {
+        min-height: 473px;
+        flex-wrap: wrap;
+        padding: 64px 127px 88px 127px;
+    }
+    &__img {
+        display: block;
+        width: 107px;
+        height: 20px;
+        margin-right: 5%;
+        @include formobile() {
+            margin: 0 auto;
+        }
+    }
+    
+}
+.footerend {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    @include formobile() {
+        flex-direction: column;
+        min-height: 216px;
+        row-gap: 84px;
+    }
+    &__menu {
+        display: flex;
+        column-gap: 32px;
+        align-items:center;
+        @include formobile() {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+        &-item {
+            list-style: none;
+        }
+        &-link {
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+            @include formobile() {
+                color: #939CAA;
+            }
+        }
+    }
+    &__logo {
+        display: flex;
+        column-gap: 24px;
+    }
+}

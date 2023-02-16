@@ -1,0 +1,47 @@
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 165px;
+    margin-bottom: 120px;
+    @include foraboutcard {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+    }
+    &__bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-img {
+            width: 300px;
+        }
+    }
+    &__card {
+        &-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            letter-spacing: -1.07143px;
+            color: #495567;
+        }
+        &-des {
+            font-family: $family-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+            color: #939CAA;
+            max-width: 290px;
+            min-height: 75px;
+            text-align:justify;
+        }
+    }
+}
